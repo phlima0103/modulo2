@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CRUD</title>
+  </head>
+  <h1>Atualização de Experiência</h1>
+
+    <form name="form1" method="post" action="/atualizaexperiencias">
+        Experiência: <input type="text" id="experiencia" name="experiencia" value="">
+        <br>
+        Data: <input type="phone" id="Data" name="Data" value="">
+        <br>
+        <input type="hidden" id="ID" name="ID" value="">
+        
+        <input type="submit" value="ATUALIZAR">  
+    </form>    
+
+    <script>
+        let url = new URL(window.location.href);
+        let params = url.searchParams;
+        url = '/atualizaexperiencias?ID='+url.searchParams.get("ID");
+
+        fetch(url)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            let experiencias = data;
+
+            experiencias.map(function(experiencias) {
+                document.getElementById('ID').value = experiencias.ID;
+                document.getElementById('experiência').value = experiencias.experiência;
+                document.getElementById('Data').value = experiencias.Data;
+            });
+            alert(response.json());
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    </script>
+</body>
+</html>

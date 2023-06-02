@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1.300;1.400;1.500;1.600;1.700;1.800;1.900 & display=swap');
+
+
+/*imagens flexiveis*/
+img {   
+    max-width: 100%;   
+    height: auto;  
+} 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+     overflow: auto;
+     max-width: auto;   
+     height: auto;
+     transition: 0.8s;
+     background-color: var(--background);
+
+}
+
+.background{
+    background-color: var(--background);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+
+}
+ 
+/* header{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+    gap: 3rem;
+} */
+
+.cabeçalho{
+    display: flex;
+    gap: 3rem;
+    font-weight: 300;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;   
+    height: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+    gap: 3rem; 
+}
+
+button{
+    color: var(--cor-primaria);
+    background:  transparent;
+    border: solid 1px var(--cor-primaria);
+    padding: 5px;
+    margin-left: 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    width: 100px;
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+}
+
+button:hover{
+    color: var(--background);
+    background: var(--cor-primaria);
+    transition: 0.8s;
+}
+
+.container-text{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100%;
+    height: auto;
+    top: 100px;
+    position: relative;
+    transition: 0.8s;
+}
+
+.text h3{
+    color: var(--cor-secundaria);
+    font-size: 18px;
+    max-width: 100%;
+    height: auto;
+    transition: 0.8s;
+
+}
+
+.text h1{
+    color: var(--cor-secundaria);
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    transition: 0.8s;
+
+}
+
+.text span{
+    color: var(--cor-primaria);
+    max-width: 100%;
+    height: auto;
+    transition: 0.8s;
+
+}
+
+.text p{
+    color:var(--cor-secundaria);
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    transition: 0.8s;
+
+}
+
+.foto-perfil{
+    width: 25%;
+    height: 25%;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+:root{
+    --cor-primaria: rgb(165, 84, 241);
+    --cor-secundaria: #000;
+    --cor-terciaria:  rgb(245, 245, 245);
+    --background:rgb(255, 255, 255);
+}
+
+.dark-mode{
+    --cor-primaria: rgb(242, 0, 242);
+    --cor-secundaria: #fff;
+    --cor-terciaria: #202020;
+    --background:rgb(25, 25, 25);
+}
+
+.sidebar{
+    position: fixed;
+    top: 10px;
+    left: -250px;
+    background-color: var(--cor-terciaria);
+    width: 250px;
+    height: 75%;
+    transition: 0.5s;
+    z-index: 1;
+    border-radius: 10%;
+}
+
+.active{
+    left: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+ul button {
+    list-style: none;
+    position: relative;
+    top: 5px;
+    left: 30px;
+    width: 150px;
+}
+
+.sidebar-botao{
+    position: absolute;
+    top: 10px;
+    right: -45px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+}
+
+.sidebar span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    top: 18px;
+    left: 7px;
+    transition: 0.5s;
+    background: var(--cor-secundaria);
+}
+
+.sidebar span:before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--cor-secundaria);
+    transition: 0.5s;
+}
+
+.sidebar span:after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--cor-secundaria);
+    transition: 0.5s;
+}
+
+.cardExperiencia{
+    border-radius: 25px;
+    width: 600px;
+    border: solid 1px var(--cor-primaria);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    top:150px;
+    position: relative;
+}
+
+#experiencia{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.Experiencia{
+    width: 90%;
+    height: 30px;
+    border: solid 1px var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    margin: 10px;
+    align-items: center;
+    color: var(--cor-secundaria)
+}
+
+.Data{
+    width: 90%;
+    height: 30px;
+    border: solid 1px var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    margin: 10px;
+    align-items: center;
+    color: var(--cor-secundaria)
+}
+
+#colorTag{
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+}
+
+@media screen and (max-width: 1024px){
+    .background{background-color: var(--background);}
+}
+
+@media screen and (max-width: 601px){
+    .background{background-color: var(--background);}
+}
+
+@media screen and (max-width: 360px){
+    .background{background-color: var(--background);}
+}
+
+
+/* cores:
+
+background:  rgb(255, 255, 255) e rgb(25, 25, 25)
+
+Fonte: #fff e #000
+
+Botões: rgb(242, 0, 242) e rgb(165, 84, 241)*/

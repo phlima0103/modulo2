@@ -1,0 +1,19 @@
+{
+  "name": "sla",
+  "version": "1.0.0",
+  "description": "Descrição do seu projeto",
+  "main": "app_41.js",
+  "scripts": {
+    "start": "nodemon app_41.js"
+  },
+  "author": "Pedro",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.18.2",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

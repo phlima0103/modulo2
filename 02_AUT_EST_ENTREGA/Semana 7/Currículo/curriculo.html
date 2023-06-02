@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <title>Currículo</title>
+</head>
+<body>
+    
+
+<div class="background">
+
+
+    <div class="sidebar">
+        <ul>
+            <button>Home</button>
+        </ul>
+
+        <ul>
+            <button>Experiência</button>
+        </ul>
+
+        <ul>
+            <button>Formação</button>
+        </ul>
+
+        <ul>
+            <button>Habilidades</button>
+        </ul>
+
+        <ul>
+            <button>Realizações</button>
+        </ul>
+
+        <ul>
+            <button class="darkmode">Tema</button>
+        </ul>
+        <button class="sidebar-botao">
+            <span></span>
+        </button>
+    </div>
+    
+
+
+    <div class="container-text">
+        <div class="text">
+            <h3>Bem vindos, pessoal!</h3>
+            <h1>Eu sou o <span>Pedro Henrique</span></h1>
+            <p>Nesse site você encontrará algumas informações importantes sobre mim
+                <br> e sobre meu currículo acadêmico até o presente momento.</p>
+        </div>
+        <img  class="foto-perfil" src="Perfil.jpg">
+    </div>
+    <div id="experiencia">
+        <div class="cardExperiencia">
+            <div id="experienciaNome" style="display: flex; flex-direction: column; width: 50%;">
+                <div class="Experiencia" id="colorTag">Experiência</div>
+            </div>
+            <div id="experienciaData" style="display: flex; flex-direction: column;width: 50%;">
+                <div class="Data" id="colorTag">Data</div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Eventos jquary -->
+    <script>
+        $(".darkmode").click(function(){
+            $("body").toggleClass("dark-mode");
+        });
+
+        $(".sidebar-botao").click(function(){
+            $(".sidebar").toggleClass('active');
+            })
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){experiencia();})
+
+        document.addEventListener("DOMContentLoaded", function(){data();})
+    </script>
+</body>
+</html>
